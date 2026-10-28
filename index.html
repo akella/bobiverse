@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bobiverse Galaxy Map</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+    <div id="labels"></div>
+
+    <div id="loading"><div class="spinner"></div><div id="loading-text">Loading galaxy…</div></div>
+
+    <header id="topbar">
+      <div class="brand">
+        <h1>Bobiverse <span>Galaxy Map</span></h1>
+        <div class="sub">Dennis E. Taylor's Bobiverse, books 1–6, on a real Milky Way</div>
+      </div>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Jump to a system… (Epsilon Eridani, Hub Zero, Nemesis)" autocomplete="off" />
+        <ul id="search-results" hidden></ul>
+      </div>
+      <nav class="views">
+        <button data-view="galaxy" title="Whole galaxy">Galaxy</button>
+        <button data-view="core" title="Galactic core: Sgr A*, PGF capital">Core</button>
+        <button data-view="neighbourhood" title="Human space around Sol">Human space</button>
+        <button data-view="nemesis" title="Nemesis dwarf galaxy">Nemesis</button>
+        <button id="btn-lock" title="Keep the orbit centred on Sol and show how the human-space systems sit in 3D">Lock to Sol</button>
+        <button id="btn-places" title="Key places of the story">Places</button>
+        <button id="btn-spoilers" title="Choose how far you have read">Spoilers</button>
+        <button id="btn-about" title="Data sources and caveats">About</button>
+      </nav>
+    </header>
+
+    <aside id="layers">
+      <h2>Layers <label class="all"><input type="checkbox" id="layers-all" checked /> all</label></h2>
+      <label><input type="checkbox" data-layer="galaxy" checked /> Milky Way</label>
+      <label><input type="checkbox" data-layer="stars" checked /> Real stars (HYG, ≤300 ly)</label>
+      <label><input type="checkbox" data-layer="starsFar" /> All HYG stars <em>+95k, loads 2 MB</em></label>
+      <label><input type="checkbox" data-layer="starLabels" checked /> Star names</label>
+      <label><input type="checkbox" data-layer="globulars" checked /> Globular clusters</label>
+      <label><input type="checkbox" data-layer="galaxies" checked /> Neighbouring galaxies</label>
+      <label><input type="checkbox" data-layer="systems" checked /> Bobiverse systems</label>
+      <label><input type="checkbox" data-layer="wormnet" checked /> Bobs' WormNet</label>
+      <label><input type="checkbox" data-layer="pgf" checked /> PGF wormhole network <em>reconstructed</em></label>
+      <label><input type="checkbox" data-layer="nonpgf" checked /> Non-PGF wormholes</label>
+      <label><input type="checkbox" data-layer="nemesis" checked /> Nemesis</label>
+      <label><input type="checkbox" data-layer="grid" /> Galactic plane grid</label>
+      <label><input type="checkbox" data-layer="travels" /> Bob paths <em>chapter locations in order</em></label>
+      <div id="travel-controls" hidden>
+        <div class="year-row"><button id="year-play" title="Play">▶</button><input id="year-range" type="range" min="2133" max="2349" step="0.1" value="2349" /></div>
+        <div id="year-label">Year 2349</div>
+        <div id="year-bobs"></div>
+      </div>
+      <h2>Spoilers</h2>
+      <div class="book-filter">
+        <input id="book-range" type="range" min="1" max="6" value="6" />
+        <div id="book-label">Through book 6: The Infinite Extent</div>
+      </div>
+    </aside>
+
+    <aside id="panel" hidden>
+      <button id="panel-close" aria-label="Close">×</button>
+      <div id="panel-kind"></div>
+      <h2 id="panel-title"></h2>
+      <div id="panel-aka"></div>
+      <div id="panel-facts"></div>
+      <p id="panel-summary"></p>
+      <div id="panel-planets"></div>
+      <h3>Events <span id="panel-count"></span></h3>
+      <ol id="panel-events"></ol>
+    </aside>
+
+    <aside id="places" hidden>
+      <button id="places-close" aria-label="Close">×</button>
+      <h2>Places</h2>
+      <div id="places-list"></div>
+    </aside>
+
+    <div id="hud">
+      <div id="hud-dist"></div>
+      <div id="hud-hint">drag to orbit · wheel to zoom · right-drag to pan · click a marker</div>
+    </div>
+
+    <div id="legend">
+      <span><i class="dot human"></i>human colony</span>
+      <span><i class="dot bobs"></i>Bob base / exploration</span>
+      <span><i class="dot alien"></i>alien civilisation</span>
+      <span><i class="dot others"></i>the Others</span>
+      <span><i class="dot pgf"></i>PGF / wormhole site</span>
+      <span><i class="dot threat"></i>threat</span>
+      <span><i class="dot approx"></i>dashed ring = approximate position</span>
+      <span><i class="dot threat"></i>red arrow = Nemesis heading for Sgr A*</span>
+    </div>
+
+    <div id="spoiler-gate" hidden>
+      <div class="modal gate">
+        <h2>How far have you read?</h2>
+        <p>The map marks every place where something happens, through book 6. Pick the last book you finished and anything later stays hidden: later systems, Nemesis, the wormhole networks, and events in the panels. You can change this any time with the Spoilers slider.</p>
+        <div class="gate-books">
+          <button data-book="1"><b>1</b> We Are Legion (We Are Bob)</button>
+          <button data-book="2"><b>2</b> For We Are Many</button>
+          <button data-book="3"><b>3</b> All These Worlds</button>
+          <button data-book="4"><b>4</b> Heaven's River</button>
+          <button data-book="5"><b>5</b> Not Till We Are Lost</button>
+          <button data-book="6" class="primary"><b>6</b> The Infinite Extent (show everything)</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" hidden>
+      <div class="modal">
+        <button id="about-close" aria-label="Close">×</button>
+        <h2>About this map</h2>
+        <p>An interactive 3D map of the Milky Way with the places of Dennis E. Taylor's <em>Bobiverse</em> novels (We Are Legion through The Infinite Extent) marked on it. Light-years everywhere; the galactic centre sits at the origin and the Sun 26,000 ly away.</p>
+        <h3>What is real</h3>
+        <ul>
+          <li><strong>Stars</strong>: 24,700 stars from the <a href="https://github.com/astronexus/HYG-Database" target="_blank" rel="noopener">HYG v4.1</a> catalog (everything within 300 ly, plus all naked-eye stars), with real positions, brightness and colour. Every named Bobiverse star (Epsilon Eridani, 82 Eridani, Eta Leporis, Gliese 877…) is placed from its Hipparcos entry.</li>
+          <li><strong>Galaxy shape</strong>: particles are sampled from the NASA/JPL-Caltech/ESO/R. Hurt artist's impression of the Milky Way (public domain), so the bar, the four arms and the Orion Spur are where current surveys put them. Vertical thickness is modelled (thin disc, thick disc, bulge).</li>
+          <li><strong>Globular clusters</strong>: all 157 from the Harris (2010) catalog, including NGC 6934.</li>
+          <li><strong>Neighbouring galaxies</strong>: LMC, SMC, Andromeda, Triangulum and the nearby dwarfs at real directions and distances. The background cubemap of far galaxies is procedural.</li>
+        </ul>
+        <h3>What is reconstructed</h3>
+        <ul>
+          <li><strong>PGF wormhole network</strong>: drawn as rings of hubs roughly every 12,000 ly from the core (12k, 24k, 37k, 49k), hubs every seven degrees, covering a third of the galaxy, with the first hub 1,700 ly from the system where Ick and Dae found it and Hub Zero eight hops away on the 37k ring. Rings Ick and Dae did not travel are drawn dimmer. Leaf chains are generated; real hub positions are never given.</li>
+          <li><strong>Bob paths</strong>: each narrator's chapter locations joined in order. The wiki does not record whether a move was by ship, wormhole, SCUT or manny, so treat them as "where the story goes".</li>
+          <li><strong>Nemesis</strong>: only its direction (galactic north) and the ~100,000-year time to impact are given, so its distance is an estimate. Everything with a dashed ring is approximate.</li>
+          <li>Places the books never locate (Jabberwocky, Skippyland, Ghinah…) are listed in the search but not plotted.</li>
+        </ul>
+        <h3>Sources</h3>
+        <p>Events and chapter locations come from the <a href="https://bobiverse.fandom.com/wiki/Timeline" target="_blank" rel="noopener">Bobiverse Wiki timeline</a> and system pages. Star list seeded by <a href="https://github.com/thunfischtoast/bobiverse-map" target="_blank" rel="noopener">thunfischtoast/bobiverse-map</a>. Built with three.js.</p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

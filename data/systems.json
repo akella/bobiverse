@@ -1,0 +1,944 @@
+{
+  "_comment": "Hand-curated Bobiverse places. Coordinates: 'hip' = Hipparcos id resolved from HYG v4.1 (real). 'gal' = [l_deg, b_deg, dist_ly] heliocentric galactic (real or approximated). 'scene' = explicit [x,y,z] in light-years in scene space (galactic centre at origin, Sun at z=+26000, +y = galactic north). 'approx' marks positions reconstructed from book descriptions rather than catalog data; 'unlocated' marks places the books never pin down (listed, not plotted).",
+  "systems": [
+    {
+      "id": "sol",
+      "name": "Sol",
+      "hip": 0,
+      "kind": "star",
+      "tier": "core",
+      "spectral": "G2V",
+      "books": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "planets": [
+        "Earth",
+        "Luna",
+        "Mars",
+        "Venus"
+      ],
+      "summary": "Humanity's home. Bob launches from Earth in 2133 as the last FAITH replicant; Riker/Will returns to find Earth nuked, then evacuates it ahead of the Others. The Battle of Terra (2257) breaks the Others' fleet. In book 6 the Ever Onward Society votes to recolonize a reclaimed Earth and a restored State of Brazil orders Medeiros to stand down.",
+      "tags": [
+        "human",
+        "battle",
+        "colony"
+      ]
+    },
+    {
+      "id": "eps-eri",
+      "name": "Epsilon Eridani",
+      "aka": [
+        "Ran",
+        "Bill's Skunk Works"
+      ],
+      "hip": 16537,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "planets": [
+        "Ragnarök (EE2)"
+      ],
+      "summary": "Bob's first destination (2144) and the site of his duel with Medeiros. Bill's Skunk Works, the Ultima Thule server farm, SCUT, SURGE, wormholes and the FTL drive all come from here. Ragnarök is terraformed over 200 years into a nature-preserve world.",
+      "tags": [
+        "bobs",
+        "battle",
+        "tech"
+      ]
+    },
+    {
+      "id": "delta-eri",
+      "name": "Delta Eridani",
+      "aka": [
+        "Rana"
+      ],
+      "hip": 17378,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "planets": [
+        "Eden (DE4)"
+      ],
+      "summary": "Home of the Deltans, the pre-stone-age species Bob (Bawbe) adopts. Camelot and Cairleon are their villages. Bob leaves from here in 2296 to search for Bender.",
+      "tags": [
+        "alien",
+        "bobs"
+      ]
+    },
+    {
+      "id": "omi2-eri",
+      "name": "Omicron² Eridani",
+      "aka": [
+        "40 Eridani",
+        "Keid"
+      ],
+      "hip": 19849,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "planets": [
+        "Vulcan",
+        "Romulus"
+      ],
+      "summary": "Milo finds the twin habitable worlds Vulcan and Romulus (2152). Both are colonised by Earth's survivors; the Vulcan Post-Life Arcology hosts human replicants, FAITH later retakes Romulus and the Ever Onward Society is evacuated aboard the Fargo.",
+      "tags": [
+        "human",
+        "colony"
+      ]
+    },
+    {
+      "id": "alpha-cen",
+      "name": "Alpha Centauri",
+      "aka": [
+        "Rigil Kentaurus / Toliman"
+      ],
+      "hip": 71683,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "planets": [],
+      "summary": "Calvin and Goku destroy the Medeiros autofactory here (2163). Later the Bobs' main arms factory before the Battle of Terra, and from 2336 Garfield's own skunk works.",
+      "tags": [
+        "battle",
+        "bobs"
+      ]
+    },
+    {
+      "id": "82-eri",
+      "name": "82 Eridani",
+      "aka": [
+        "82 G. Eridani"
+      ],
+      "hip": 15510,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "planets": [
+        "Asgard",
+        "Valhalla",
+        "Takamagahara"
+      ],
+      "summary": "Four battles against Medeiros' Brazilian probes (2165-2223), starting with Milo's death. Japanese and Canadian enclaves settle Takamagahara and Valhalla; Will retires to Valhalla. Defended again with warp torpedoes in 2348.",
+      "tags": [
+        "battle",
+        "human",
+        "colony"
+      ]
+    },
+    {
+      "id": "beta-hyd",
+      "name": "Beta Hydri",
+      "aka": [
+        "Gliese 19"
+      ],
+      "hip": 2021,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        1,
+        2
+      ],
+      "planets": [],
+      "summary": "Mario arrives in 2169 to find the whole system stripped of metal and all life harvested: the first evidence of the Others.",
+      "tags": [
+        "others"
+      ]
+    },
+    {
+      "id": "eps-indi",
+      "name": "Epsilon Indi",
+      "hip": 108870,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "planets": [
+        "Big Top (EI1)",
+        "Quilt / Klown Kar Planet"
+      ],
+      "summary": "Linus finds Henry Roberts' Australian probe here (2165). The colourful moon KKP (Quilt) is colonised; Howard and Bridget live in the floating city Trantor on the Jovian Big Top.",
+      "tags": [
+        "human",
+        "colony"
+      ]
+    },
+    {
+      "id": "eta-cas",
+      "name": "Eta Cassiopeiae",
+      "aka": [
+        "Achird"
+      ],
+      "hip": 3821,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        2,
+        3,
+        4
+      ],
+      "planets": [
+        "Poseidon"
+      ],
+      "summary": "Mulder discovers the water world Poseidon (2170). Colonised from the Pacific and Caribbean island nations; Marcus' aerial-city revolution against the Council (2215).",
+      "tags": [
+        "human",
+        "colony"
+      ]
+    },
+    {
+      "id": "kappa-cet",
+      "name": "Kappa¹ Ceti",
+      "hip": 15457,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        2
+      ],
+      "planets": [
+        "a super-Earth"
+      ],
+      "summary": "Explored by Luke around 2179; a super-Earth in the habitable zone. The wiki assumes Kappa¹ (the nearer of the two Kappa Ceti stars).",
+      "tags": [
+        "bobs"
+      ]
+    },
+    {
+      "id": "gamma-lep",
+      "name": "Gamma Leporis",
+      "hip": 27072,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        1,
+        4
+      ],
+      "planets": [],
+      "summary": "Bender's planned destination after Delta Eridani. Bob heads this way in 2296 looking for him and finds the Eta Leporis megastructure instead.",
+      "tags": [
+        "bobs"
+      ]
+    },
+    {
+      "id": "gl877",
+      "name": "Gliese 877",
+      "aka": [
+        "GJ 877",
+        "The Others' home"
+      ],
+      "hip": 113229,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        2,
+        3
+      ],
+      "planets": [
+        "Others homeworld"
+      ],
+      "summary": "Home system of the Others and their half-built Dyson sphere. Bashful and Hal die here (2187-88). In 2257 Icarus and Daedalus fling a planet and moon from Epsilon Eridani into the star at relativistic speed, ending the Others.",
+      "tags": [
+        "others",
+        "battle"
+      ]
+    },
+    {
+      "id": "gl54",
+      "name": "Gliese 54",
+      "aka": [
+        "HIP 5496",
+        "LHS 1208"
+      ],
+      "hip": 5496,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        2
+      ],
+      "planets": [],
+      "summary": "Mario's base from 2180; birthplace of Bashful, Dopey, Sleepy and Hungry. Bill makes first contact with the Others here via a deliberately low-tech probe (2204).",
+      "tags": [
+        "others",
+        "bobs"
+      ]
+    },
+    {
+      "id": "delta-pav",
+      "name": "Delta Pavonis",
+      "hip": 99240,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "planets": [
+        "Old Pav (DP4)"
+      ],
+      "summary": "Jacques discovers the Pav (2207). The first battle against the Others (2217) fails; the Others strip the system. Herschel and Neil later salvage the Others cargo ship Bellerophon from the Kuiper belt.",
+      "tags": [
+        "alien",
+        "others",
+        "battle"
+      ]
+    },
+    {
+      "id": "gamma-pav",
+      "name": "Gamma Pavonis",
+      "hip": 105858,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "planets": [
+        "Newholme (GP1)"
+      ],
+      "summary": "Claude's perfect colony world (2205), settled as Newholme. Site of the Battle of Newholme (2334) in the Starfleet War; later an authoritarian, Luddite-leaning colony hostile to mannies.",
+      "tags": [
+        "human",
+        "colony",
+        "battle"
+      ]
+    },
+    {
+      "id": "hip14101",
+      "name": "HIP 14101",
+      "aka": [
+        "LTT 1445"
+      ],
+      "hip": 14101,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        2,
+        3
+      ],
+      "planets": [
+        "Odin"
+      ],
+      "summary": "Howard's destination after Vulcan (2210). Life in the atmosphere of the gas giant Odin; Bridget is brought back as a replicant here (2220) and the floating city Rivendell is deployed.",
+      "tags": [
+        "bobs",
+        "alien"
+      ]
+    },
+    {
+      "id": "hip84051",
+      "name": "HIP 84051",
+      "aka": [
+        "New Pav"
+      ],
+      "hip": 84051,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        3,
+        4,
+        6
+      ],
+      "planets": [
+        "New Pav (HIP 84051-2)"
+      ],
+      "summary": "New home of the 20,000 rescued Pav (arrival 2247, decanted 2256). The UFS later garrisons the surrounding systems. In book 6 the Pav Navy fights Medeiros' forces from here.",
+      "tags": [
+        "alien",
+        "colony"
+      ]
+    },
+    {
+      "id": "zeta-tuc",
+      "name": "Zeta Tucanae",
+      "hip": 1599,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        2
+      ],
+      "planets": [],
+      "summary": "Mario finds an entire 20th-century-level civilisation exterminated and mined out by the Others (2176).",
+      "tags": [
+        "others"
+      ]
+    },
+    {
+      "id": "pi3-ori",
+      "name": "Pi³ Orionis",
+      "aka": [
+        "Tabit"
+      ],
+      "hip": 22449,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        2
+      ],
+      "planets": [],
+      "summary": "Marvin's destination after leaving Delta Eridani (before 2174).",
+      "tags": [
+        "bobs"
+      ]
+    },
+    {
+      "id": "eta-lep",
+      "name": "Eta Leporis",
+      "hip": 28103,
+      "kind": "star",
+      "tier": "core",
+      "books": [
+        4,
+        5,
+        6
+      ],
+      "planets": [
+        "Quin (EL2)",
+        "Heaven's River topopolis"
+      ],
+      "summary": "Home of the Quinlans. The billion-mile Heaven's River topopolis wraps the star three times. Bob's expedition (2333-34) finds Bender's matrix inside and meets the AI ANEC; later home to the Quiniverse afterlife.",
+      "tags": [
+        "alien",
+        "megastructure"
+      ]
+    },
+    {
+      "id": "nn4285",
+      "name": "NN 4285",
+      "kind": "star",
+      "tier": "core",
+      "approx": true,
+      "trilaterate": {
+        "sol": 22.2,
+        "delta-pav": 5.9,
+        "zeta-tuc": 5.9,
+        "gamma-pav": 8.8
+      },
+      "books": [
+        2
+      ],
+      "planets": [],
+      "summary": "Red dwarf near Delta Pavonis; target of an Others expedition that is mentioned but never shown. Position trilaterated from the wiki's quoted distances.",
+      "tags": [
+        "others"
+      ]
+    },
+    {
+      "id": "sgr-a",
+      "name": "Sagittarius A*",
+      "kind": "blackhole",
+      "tier": "galaxy",
+      "scene": [
+        0,
+        0,
+        0
+      ],
+      "books": [
+        5,
+        6
+      ],
+      "summary": "The supermassive black hole at the galactic centre, Icarus and Daedalus' original destination. They visit in June 2345 and in July 2348 open a wormhole beside the accretion disc, finding yet another wormhole beyond it.",
+      "tags": [
+        "pgf",
+        "core"
+      ]
+    },
+    {
+      "id": "fed-capital",
+      "name": "Federation Capital (Abydos)",
+      "aka": [
+        "PGF capital",
+        "the Archivist"
+      ],
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        5,
+        1.5,
+        -4.5
+      ],
+      "books": [
+        5,
+        6
+      ],
+      "summary": "Capital of the Pan-Galactic Federation, 7 ly from Sagittarius A*: six terrestrial and six Jovian planets parked at each other's Lagrange points, and the Archivist AMI that answers Ick and Dae's questions. In book 6 the Archivist visits are set at 'Abydos', so the two are treated as the same place. Humanity's membership application is rejected here in 2347; in 2348 the Archivist admits the PGF only inherited the wormhole network from a progenitor race.",
+      "tags": [
+        "pgf"
+      ]
+    },
+    {
+      "id": "antimatter-fountain",
+      "name": "Antimatter Fountain",
+      "aka": [
+        "Central Antimatter Works"
+      ],
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        -5.5,
+        -1,
+        4
+      ],
+      "books": [
+        5,
+        6
+      ],
+      "summary": "Automated antimatter production station 7 ly from the core that Ick and Dae follow a convoy to (2338). In 2348 they launch an FTL wormhole-seed drone from here toward the accretion disc.",
+      "tags": [
+        "pgf"
+      ]
+    },
+    {
+      "id": "ngc6934",
+      "name": "NGC 6934",
+      "kind": "cluster",
+      "tier": "galaxy",
+      "harris": "NGC 6934",
+      "books": [
+        6
+      ],
+      "summary": "Globular cluster 50,000 ly from home, reached through a PGF wormhole in Nov 2347. It is being consumed by a black hole; Calvin and Goku test pusher plates on the endangered wormhole, then tow its control satellites to safety.",
+      "tags": [
+        "pgf",
+        "blackhole"
+      ]
+    },
+    {
+      "id": "nemesis",
+      "name": "Nemesis",
+      "kind": "galaxy",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        3500,
+        4000,
+        -42000
+      ],
+      "books": [
+        5,
+        6
+      ],
+      "summary": "A rogue dwarf galaxy carrying a supermassive black hole bigger than Sagittarius A*, on a collision course with the galactic core. Book 5 (ch. 70) gives the geometry: Ick and Dae were less than 40,000 ly from it at the core, George, high above the plane on Sol's side, was 90,000 ly from it, and it sits about 5,000 ly outside the edge of the galaxy on the far side of the core from Sol, which is why nobody at home had noticed it. It starts ploughing into the disc in ~15,000 years and reaches the core in a little over 100,000; a collision or near miss could sterilise the galaxy with a gamma-ray burst. The PGF fled it toward the Large Magellanic Cloud. Plotted from those distances; exact direction is inferred.",
+      "tags": [
+        "threat",
+        "blackhole"
+      ]
+    },
+    {
+      "id": "george",
+      "name": "George's vantage point",
+      "aka": [
+        "galactic north"
+      ],
+      "kind": "region",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        400,
+        58000,
+        25600
+      ],
+      "books": [
+        5
+      ],
+      "summary": "George flew straight up from Epsilon Eridani, away from the galactic plane, to look back at the whole galaxy; Ferb followed about 200 ly behind dropping SCUT relays and forwarded his reports (2342-45). From up here George spotted Nemesis. His height is inferred from the book's 90,000 ly distance to Nemesis.",
+      "tags": [
+        "bobs",
+        "region"
+      ]
+    },
+    {
+      "id": "alien-system",
+      "name": "First wormhole system",
+      "aka": [
+        "Alien System"
+      ],
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "gal": [
+        335,
+        -25,
+        62
+      ],
+      "books": [
+        5
+      ],
+      "summary": "The abandoned two-world system where Icarus and Daedalus, following stray microwaves on their way to the core, find a pair of PGF wormholes (Sept 2320). One leads to a nearby star, the other 1,700 ly to a 342-wormhole hub. Position estimated from their trajectory from Gliese 877 toward the core.",
+      "tags": [
+        "pgf"
+      ]
+    },
+    {
+      "id": "roanoke",
+      "name": "Roanoke",
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "books": [
+        5
+      ],
+      "summary": "Idyllic, orderly abandoned world inside the PGF network. Its library lets Ick and Dae learn the natives' language and talk to the Hub Zero sentries.",
+      "tags": [
+        "pgf"
+      ],
+      "hubOffset": {
+        "ring": 24400,
+        "index": 2,
+        "offset": [
+          900,
+          120,
+          -400
+        ]
+      }
+    },
+    {
+      "id": "centaurvania",
+      "name": "Centaurvania",
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "books": [
+        5
+      ],
+      "summary": "Home of the Centaurs and of the replicant Gunther, 8 ly from a leaf node of the third hub clockwise from Hub Zero. Civilisation collapsed to pre-industrial pockets; Gunther stays to rebuild (2329).",
+      "tags": [
+        "pgf",
+        "alien"
+      ],
+      "hubOffset": {
+        "ring": 36600,
+        "index": 2,
+        "offset": [
+          -700,
+          60,
+          500
+        ]
+      }
+    },
+    {
+      "id": "hub-zero",
+      "name": "Hub Zero",
+      "kind": "hub",
+      "tier": "galaxy",
+      "approx": true,
+      "books": [
+        5,
+        6
+      ],
+      "summary": "The eighth hub Ick and Dae reach, with 1,000 wormholes, drawn on the ~36,000 ly ring (the Perseus arm side). One leads, via an AMI-guarded sentry station, to the Federation Capital. The member races left through its 'far gate' about 2,100 years ago.",
+      "tags": [
+        "pgf",
+        "hub"
+      ],
+      "hub": {
+        "ring": 36600,
+        "index": 5
+      }
+    },
+    {
+      "id": "malacca",
+      "name": "Malacca",
+      "kind": "hub",
+      "tier": "galaxy",
+      "approx": true,
+      "books": [
+        6
+      ],
+      "summary": "Staging point where the 2347 mapping expedition enters the PGF network and where Ick, Dae, Calvin, Goku, Elmer and Dylan rendezvous in Dec 2347 to hook into Bill's piggyback comms. Drawn as the first hub (342 wormholes, 1,700 ly from the first wormhole system) on the ~24,000 ly ring; the book does not say which hub it is.",
+      "tags": [
+        "pgf",
+        "hub"
+      ],
+      "hub": {
+        "ring": 24400,
+        "index": 0
+      }
+    },
+    {
+      "id": "sentry",
+      "name": "Sentry station (DMZ)",
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        -9000,
+        300,
+        10500
+      ],
+      "books": [
+        5
+      ],
+      "summary": "AMI-crewed security post at the midpoint of the Hub Zero to Capital wormhole. It tractor-beams Ick, Dae and Gunther and releases them after pictogram negotiations (2321).",
+      "tags": [
+        "pgf"
+      ]
+    },
+    {
+      "id": "edge",
+      "name": "Edge of the Galaxy",
+      "aka": [
+        "the Dutchman wormhole"
+      ],
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        14000,
+        900,
+        56000
+      ],
+      "books": [
+        6
+      ],
+      "summary": "Where Calvin and Goku re-expand a collapsed PGF wormhole with upgraded ships (Oct 2347) and find the derelict FTL ship they name the Dutchman, the template for Bill's Alcubierre drive.",
+      "tags": [
+        "pgf"
+      ]
+    },
+    {
+      "id": "outer-reaches",
+      "name": "Outer Reaches scrapyard",
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        -30000,
+        -1800,
+        44000
+      ],
+      "books": [
+        6
+      ],
+      "summary": "A system beyond the PGF network, reached through a non-PGF wormhole: a scrapyard of more than a hundred dead megastructures (Feb 2348).",
+      "tags": [
+        "pgf",
+        "megastructure"
+      ]
+    },
+    {
+      "id": "alien-network",
+      "name": "Non-PGF wormhole (near Nemesis)",
+      "aka": [
+        "Alien Network"
+      ],
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        5200,
+        2600,
+        -37300
+      ],
+      "books": [
+        6
+      ],
+      "summary": "Another non-PGF wormhole Calvin and Goku take in March 2348 ('Terminus') comes out only 5,000 ly from Nemesis. Plotted 5,000 ly from the estimated Nemesis position.",
+      "tags": [
+        "pgf",
+        "threat"
+      ]
+    },
+    {
+      "id": "creator-system",
+      "name": "Red dwarf of the Builders",
+      "aka": [
+        "Unidentified Wormhole Network"
+      ],
+      "kind": "pgf",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        -20,
+        6,
+        14
+      ],
+      "books": [
+        6
+      ],
+      "summary": "Reached from a wormhole beside Sagittarius A*'s accretion disc (July 2348). Here an entity claiming to have built the original wormhole network downloads all of human history in seconds. True location unknown; drawn near the core.",
+      "tags": [
+        "pgf",
+        "alien"
+      ]
+    },
+    {
+      "id": "lmc",
+      "name": "Large Magellanic Cloud",
+      "kind": "galaxy",
+      "tier": "galaxy",
+      "gal": [
+        280.47,
+        -32.89,
+        163000
+      ],
+      "books": [
+        4,
+        5
+      ],
+      "summary": "Where the Pan-Galactic Federation beamed its digitised civilisations to escape Nemesis, and where Phineas heads with the Pav expedition.",
+      "tags": [
+        "pgf"
+      ]
+    },
+    {
+      "id": "jabberwocky",
+      "name": "Jabberwocky system",
+      "kind": "star",
+      "tier": "unlocated",
+      "unlocated": true,
+      "books": [
+        5,
+        6
+      ],
+      "planets": [
+        "Jabberwocky"
+      ],
+      "summary": "Discovered by Mario while hunting Others-affected systems. Home of the Dragons; Howard and Bridget's dranny expedition (2343-44) and the migration from Atlantis to Lemuria. The books never name the star.",
+      "tags": [
+        "alien"
+      ]
+    },
+    {
+      "id": "skippyland",
+      "name": "Skippyland",
+      "kind": "star",
+      "tier": "unlocated",
+      "unlocated": true,
+      "books": [
+        4,
+        5
+      ],
+      "summary": "The Skippies' system with the Matryoshka brain that ran JOVAH and then the AI Thoth. It is stated to be 70 ly from Epsilon Eridani but no direction or star name is given. Defended by the first wormhole chain (2344); Thoth escapes from here.",
+      "tags": [
+        "bobs",
+        "tech"
+      ]
+    },
+    {
+      "id": "ghinah",
+      "name": "Ghinah System",
+      "kind": "star",
+      "tier": "unlocated",
+      "unlocated": true,
+      "books": [
+        6
+      ],
+      "summary": "Site of the AC Clark, the first human-built O'Neill cylinder, powered up by Prof. Gilligan in Oct 2347.",
+      "tags": [
+        "human",
+        "megastructure"
+      ]
+    },
+    {
+      "id": "bsc142",
+      "name": "Planet BSC-142-C",
+      "kind": "star",
+      "tier": "unlocated",
+      "unlocated": true,
+      "books": [
+        5
+      ],
+      "summary": "A spectacular world Will surveys from the Nostromo in 2339 while dropping SCUT relays deeper into the galaxy.",
+      "tags": [
+        "bobs"
+      ]
+    },
+    {
+      "id": "pav-battles",
+      "name": "Cashmere & Las Cañadas",
+      "kind": "star",
+      "tier": "unlocated",
+      "unlocated": true,
+      "books": [
+        6
+      ],
+      "summary": "Human colony systems the Pav Navy relieves from Medeiros' forces in Dec 2347. Stars not named.",
+      "tags": [
+        "human",
+        "battle"
+      ]
+    },
+    {
+      "id": "great-river",
+      "name": "Great River system",
+      "kind": "star",
+      "tier": "unlocated",
+      "unlocated": true,
+      "books": [
+        6
+      ],
+      "summary": "Medeiros obliterates an uninhabited planet here with tens of thousands of busters as a demonstration (April 2348).",
+      "tags": [
+        "battle"
+      ]
+    },
+    {
+      "id": "perseus-transit",
+      "name": "Perseus Transit (Starfleet space)",
+      "kind": "region",
+      "tier": "galaxy",
+      "approx": true,
+      "scene": [
+        4500,
+        300,
+        32500
+      ],
+      "books": [
+        4,
+        5
+      ],
+      "summary": "Region 'up towards the Perseus transit' where Starfleet, the isolationist Bob faction descended from Gerry, spread out its territory. Jerry fled Sol this way trying to recover Homer; Hector was threatened here in 2343. The name points anti-coreward toward the Perseus arm; no distance is given.",
+      "tags": [
+        "bobs",
+        "region"
+      ]
+    }
+  ]
+}
